@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>RL Distribuidora - Produtos</title>
+    <style>
+        /* Estilos CSS para o seu site */
+
+        /* ... */
+
+        .cart {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .cart h3 {
+            margin: 0;
+        }
+
+        .cart-items {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+
+        .cart-item img {
+            width: 30px;
+            height: 30px;
+            object-fit: cover;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Conteúdo do seu site -->
+
+    <!-- ... -->
+
+    <!-- Carrinho de Compras -->
+    <div class="cart">
+        <h3>Carrinho de Compras</h3>
+        <ul class="cart-items"></ul>
+    </div>
+
+    <script>
+        // JavaScript para o carrinho de compras
+
+        // Obtenha uma referência para o elemento de lista do carrinho
+        const cartItemsElement = document.querySelector('.cart-items');
+
+        // Função para adicionar um item ao carrinho
+        function addToCart(product) {
+            // Crie um novo elemento de item do carrinho
+            const cartItemElement = document.createElement('li');
+            cartItemElement.classList.add('cart-item');
+
+            // Crie um elemento de imagem para o produto
+            const productImageElement = document.createElement('img');
+            productImageElement.src = IMAGEM/ALFACE;
+            productImageElement.alt = product.name;
+
+            // Adicione a imagem ao elemento do item do carrinho
+            cartItemElement.appendChild(productImageElement);
+
+            // Crie um elemento de texto para exibir o nome do produto
+            const productNameElement = document.createElement('span');
+            productNameElement.textContent = product.name;
+
+            // Adicione o nome do produto ao elemento do item do carrinho
+            cartItemElement.appendChild(productNameElement);
+
+            // Adicione o item do carrinho à lista de itens do carrinho
+            cartItemsElement.appendChild(cartItemElement);
+        }
+
+        // Exemplo de uso
+        const product1 = {
+            name: 'Produto 1',
+            image: 'caminho/para/imagem1.jpg',
+            price: 10.00
+        };
+
+        addToCart(product1);
+    </script>
+</body>
+</html>

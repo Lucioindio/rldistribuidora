@@ -1,0 +1,71 @@
+<DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="x-ua-compatible" content="ie-edge" />
+      <meta
+        name="view import"
+        content="width=device-witdh, initial-scale=1.0"
+      />
+      <section>
+        <article>
+          <style>
+            body {
+              background-image: url("IMAGEM/imagem.jpg");
+              background-size: cover;
+
+              background-position: contain;
+            }
+          </style>
+          <img src="IMAGEM/lucio.png" />
+          <h1>A melhor distribuidora da região</h1>
+        </article>
+      </section>
+      <title>cadastro de usuario</title>
+      <style>
+        * {
+          box-sizing: boder-box;
+        }
+
+        body {
+          width: 100%;
+          height: 100%;
+        }
+
+        form {
+          width: 300px;
+          margin: 100px;
+        }
+
+        input {
+          display: block;
+          margin: 100 px auto;
+          width: 250px;
+          height: 30px;
+        }
+      </style>
+    </head>
+    <body>
+      <form>
+        <h3>cadastro de usuario</h3>
+        <input type="text" placeholder="usuario" id="usuario" />
+        <input type="senha" placeholder="senha" id="senha" />
+        <input type="submit" onclick=" logar(); return false" />
+      </form>
+      <script>
+        function logar() {
+          var usuario = document.getElementById("usuario").value;
+          var senha = document.getElementById("senha").value;
+
+          if (usuario == "admin" && senha == "admin") {
+            alert("sucesso");
+            location.href = "rl distribuidora.HTML";
+          } else {
+            alert("usuario ou senha incorretos");
+          }
+        }
+      </script>
+      <footer>Desenvolvido por Lucio</a></footer>
+    </body>
+  </html></DOCTYPE
+>
